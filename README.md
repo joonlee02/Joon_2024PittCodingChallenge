@@ -10,11 +10,11 @@ This repository contains an analysis of HAM depression scale data for participan
 - **summary_table.csv**: Summary table of participant characteristics by recruitment source.
 
 ## Requirements
-- PDF of assignment description 'CodingChallenge2024.pdf'
+- PDF of assignment description "CodingChallenge2024.pdf"
 - R with `dplyr`, `tidyverse`, and `ggplot2` libraries.
 - Data file `CodeChallenge2024.RData`.
-- Text file containing list of relevant participant IDs 'IDs.txt'
+- Text file containing list of relevant participant IDs "IDs.txt"
 
 ## Steps
-1. Run `analysis_script.R` in RStudio.
+1. Run `JoonLee2024PittCodingAssignment.R` in RStudio.
 2. Outputs will be saved in the working directory.
