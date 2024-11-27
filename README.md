@@ -16,5 +16,7 @@ This repository contains an analysis of HAM depression scale data for participan
 - Text file containing list of relevant participant IDs "IDs.txt"
 
 ## Steps
-1. Run `JoonLee2024PittCodingAssignment.R` in RStudio.
-2. Outputs will be saved in the working directory.
+1. Read and understand assignment details from "CodingChallenge2024.pdf"
+2. Download `CodeChallenge2024.RData` and "IDs.txt".
+3. Run `JoonLee2024PittCodingAssignment.R` in RStudio.
+4. Outputs will be saved in the working directory.
