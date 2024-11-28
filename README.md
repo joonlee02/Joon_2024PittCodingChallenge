@@ -18,4 +18,4 @@ This repository contains an analysis of HAM depression scale data for participan
 - **total_participants_chart.png**: Bar graph showing participant counts by recruitment source
 - **gender_chart.png**: Bar graph showing participant gender counts by recruitment source
 - **age_boxplot.png**: Box and whisker plot showing participant age distribution by recruitment source
-- **summary_table.csv**: Table of participant characteristics by recruitment source split by age, gender, and group
+- **summary_table.csv**: Table of participant characteristics (age & gender) split by recruitment source 
