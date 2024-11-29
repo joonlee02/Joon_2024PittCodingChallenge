@@ -176,11 +176,15 @@ group_recruitment_chart <- ggplot(recruitment_data, aes(x = RecruitSource, fill 
   ) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
+# Calculate total participants for percentage calculation
+total_participants <- nrow(recruitment_data)
+
 # Summary Table: Participants, Age, and Gender Distribution
 summary_table <- recruitment_data %>%
   group_by(RecruitSource) %>%
   summarise(
     Total_Participants = n(),
+    Percent_of_Total = (Total_Participants / total_participants) * 100,  # Percentage of participants per source
     Avg_Age = mean(Age, na.rm = TRUE),
     Min_Age = min(Age, na.rm = TRUE),
     Max_Age = max(Age, na.rm = TRUE),
@@ -190,12 +194,12 @@ summary_table <- recruitment_data %>%
     Percent_Female = (Female_Count / Total_Participants) * 100
   )
 
-# Save summary table to a csv file
+# Save summary table to a CSV file
 write.csv(summary_table, "summary_table.csv", row.names = FALSE)
+
 
 # Save charts
 ggsave("total_participants_chart.png", plot = total_participants_chart, width = 8, height = 6, dpi = 300)
 ggsave("gender_chart.png", plot = gender_chart, width = 8, height = 6, dpi = 300)
 ggsave("age_boxplot.png", plot = age_boxplot, width = 8, height = 6, dpi = 300)
 ggsave("group_recruitment_chart.png", plot = group_recruitment_chart, width = 8, height = 6, dpi = 300)
-
