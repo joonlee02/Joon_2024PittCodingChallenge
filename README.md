@@ -1,5 +1,10 @@
 # Joon_2024PittCodingChallenge
-This repository contains an analysis of HAM depression scale data for participants in the  Longitudinal Research Program in Late-Life Suicide studies.
+This repository contains the background information, data, and R code necessary to calculate HAM depression scale scores of the participants in the Longitudinal Research Program in Late-Life Suicide studies as well as visualize the participant characteristics from various recruitment sources. The R code achieves the following things:
+- converts all old ids of participants into new ids
+- calculates the HAM score of each participant at each visit point
+- calculates the mean HAM score of each participant
+- calculates the visit date closest to 1 year after a participant's first consent date and identifies his/her HAM score from that date (if applicable)
+- creates graphs depicting the number of participants from each recruitment source as well as the age, gender, and group distribution of participants from each recruitment source
 
 ## Requirements
 - PDF of assignment description "CodingChallenge2024.pdf"
