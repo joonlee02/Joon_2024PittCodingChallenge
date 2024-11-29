@@ -3,7 +3,7 @@ This repository contains the background information, data, and R code necessary 
 - converts all old ids of participants into new ids
 - calculates the HAM score of each participant at each visit point
 - calculates the mean HAM score of each participant
-- calculates the visit date closest to 1 year after a participant's first consent date and identifies his/her HAM score from that date (if applicable)
+- calculates the visit date closest to 1 year after a participant's first consent date and identifies his/her HAM score from that date
 - creates graphs depicting the number of participants from each recruitment source as well as the age, gender, and group distribution of participants from each recruitment source
 
 ## Requirements
