@@ -128,7 +128,7 @@ min_age <- min(recruitment_data$Age, na.rm = TRUE)
 appropriate_min <- floor(min_age / 5) * 5  # Round down to the nearest multiple of 5
 interval <- 5
 
-# Total Participants by Recruitment Source (Bar Chart)
+# Total Participants by Recruitment Source (Bar Graph)
 total_participants_chart <- ggplot(recruitment_data, aes(x = RecruitSource)) +
   geom_bar(fill = "steelblue") +
   theme_minimal() +
@@ -143,7 +143,7 @@ total_participants_chart <- ggplot(recruitment_data, aes(x = RecruitSource)) +
   ) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
-# Gender Distribution by Recruitment Source (Grouped Bar Chart)
+# Gender Distribution by Recruitment Source (Grouped Bar Graph)
 gender_chart <- ggplot(recruitment_data, aes(x = RecruitSource, fill = Gender)) +
   geom_bar(position = "dodge") +
   theme_minimal() +
@@ -160,7 +160,7 @@ gender_chart <- ggplot(recruitment_data, aes(x = RecruitSource, fill = Gender)) 
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
 
-# Grouped Bar Chart: Participants by Group and Recruitment Source
+# Participants by Group and Recruitment Source (Grouped Bar Graph)
 group_recruitment_chart <- ggplot(recruitment_data, aes(x = RecruitSource, fill = Group)) +
   geom_bar(position = "dodge") +
   theme_minimal() +
@@ -175,6 +175,18 @@ group_recruitment_chart <- ggplot(recruitment_data, aes(x = RecruitSource, fill 
     expand = c(0, 0)  # Ensures bars touch the x-axis
   ) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+# Age Distribution by Recruitment Source (Box and whisker plot)
+age_boxplot <- ggplot(recruitment_data, aes(x = RecruitSource, y = Age)) +
+  geom_boxplot(fill = "lightblue") +
+  theme_minimal() +
+  labs(
+    title = "Age Distribution by Recruitment Source",
+    x = "Recruitment Source",
+    y = "Age"
+  ) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
 
 # Calculate total participants for percentage calculation
 total_participants <- nrow(recruitment_data)
@@ -196,7 +208,6 @@ summary_table <- recruitment_data %>%
 
 # Save summary table to a CSV file
 write.csv(summary_table, "summary_table.csv", row.names = FALSE)
-
 
 # Save charts
 ggsave("total_participants_chart.png", plot = total_participants_chart, width = 8, height = 6, dpi = 300)
