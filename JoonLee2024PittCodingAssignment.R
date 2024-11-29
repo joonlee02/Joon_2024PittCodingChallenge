@@ -128,7 +128,7 @@ min_age <- min(recruitment_data$Age, na.rm = TRUE)
 appropriate_min <- floor(min_age / 5) * 5  # Round down to the nearest multiple of 5
 interval <- 5
 
-# Total Participants by Recruitment Source (Bar Graph)
+# Total Participants by Recruitment Source (Bar Chart)
 total_participants_chart <- ggplot(recruitment_data, aes(x = RecruitSource)) +
   geom_bar(fill = "steelblue") +
   theme_minimal() +
@@ -143,7 +143,7 @@ total_participants_chart <- ggplot(recruitment_data, aes(x = RecruitSource)) +
   ) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
-# Gender Distribution by Recruitment Source (Grouped Bar Graph)
+# Gender Distribution by Recruitment Source (Grouped Bar Chart)
 gender_chart <- ggplot(recruitment_data, aes(x = RecruitSource, fill = Gender)) +
   geom_bar(position = "dodge") +
   theme_minimal() +
@@ -160,7 +160,7 @@ gender_chart <- ggplot(recruitment_data, aes(x = RecruitSource, fill = Gender)) 
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
 
-# Participants by Group and Recruitment Source (Grouped Bar Graph)
+# Grouped Bar Chart: Participants by Group and Recruitment Source
 group_recruitment_chart <- ggplot(recruitment_data, aes(x = RecruitSource, fill = Group)) +
   geom_bar(position = "dodge") +
   theme_minimal() +
@@ -176,7 +176,7 @@ group_recruitment_chart <- ggplot(recruitment_data, aes(x = RecruitSource, fill 
   ) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
-# Age Distribution by Recruitment Source (Box and whisker plot)
+# Age Distribution by Recruitment Source (Boxplot)
 age_boxplot <- ggplot(recruitment_data, aes(x = RecruitSource, y = Age)) +
   geom_boxplot(fill = "lightblue") +
   theme_minimal() +
@@ -197,7 +197,7 @@ summary_table <- recruitment_data %>%
   summarise(
     Total_Participants = n(),
     Percent_of_Total = (Total_Participants / total_participants) * 100,  # Percentage of participants per source
-    Avg_Age = mean(Age, na.rm = TRUE),
+    Median_Age = median(Age, na.rm = TRUE),
     Min_Age = min(Age, na.rm = TRUE),
     Max_Age = max(Age, na.rm = TRUE),
     Age_IQR = IQR(Age, na.rm = TRUE),
