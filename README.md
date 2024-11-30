@@ -10,7 +10,7 @@ This repository contains the background information, data, and R code necessary 
 - PDF of assignment description "CodingChallenge2024.pdf"
 - R with `dplyr`, `tidyverse`, and `ggplot2` libraries
 - Data file `CodeChallenge2024.RData` containing data necessary for assignment
-- Text file containing list of relevant participant IDs "IDs.txt"
+- Text file containing list of relevant participant IDs "IDs.txt". Note that these are "old ids".
 
 ## Steps
 1. Read and understand assignment details from "CodingChallenge2024.pdf"
