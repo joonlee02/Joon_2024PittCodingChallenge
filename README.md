@@ -23,4 +23,5 @@ This repository contains the background information, data, and R code necessary 
 - **total_participants_chart.png**: Bar graph showing participant counts by recruitment source
 - **gender_chart.png**: Bar graph showing participant gender breakdown by recruitment source
 - **age_boxplot.png**: Box and whisker plot showing participant age distribution by recruitment source
+- **group_recruitment_chart.png**: Bar graph showing participant group breakdown by recruitment source
 - **summary_table.csv**: Table of participant characteristics (age & gender) split by recruitment source 
