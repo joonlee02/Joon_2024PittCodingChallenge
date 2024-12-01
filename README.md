@@ -21,6 +21,6 @@ This repository contains the background information, data, and R code necessary 
 ## Output Files
 - **final_df.csv**: Cleaned data frame containing participant HAM scores. "latest_HAM_score" indicates a participant's HAM score from their most recent visit as indicated under "latest_visit date". "HAM_score_closest" indicates a participant's HAM score from the visit date closest to 1 year after their first consent date, which is shown under "closest_visit_date".
 - **total_participants_chart.png**: Bar graph showing participant counts by recruitment source
-- **gender_chart.png**: Bar graph showing participant gender counts by recruitment source
+- **gender_chart.png**: Bar graph showing participant gender breakdown by recruitment source
 - **age_boxplot.png**: Box and whisker plot showing participant age distribution by recruitment source
 - **summary_table.csv**: Table of participant characteristics (age & gender) split by recruitment source 
